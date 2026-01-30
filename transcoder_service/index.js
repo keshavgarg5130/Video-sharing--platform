@@ -1,24 +1,24 @@
 import express from 'express';
 import cors from 'cors';
-import uploadRouter from "./routes/upload.route.js";
 import dotenv from 'dotenv';
-import kafkapublisherRoute from "./routes/kafkapublisher.route.js";
+import KafkaConfig from "./kafka/kafka.js";
 
 dotenv.config();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
+
 const app = express();
 app.use(cors({
     origin: "*",
     allowedHeaders: "*",
 }));
-
 app.use(express.json());
-app.use('/upload', uploadRouter);
-app.use('/publish', kafkapublisherRoute);
 app.get('/', (req, res) => {
-    res.send('Hello')
+    res.send('Transcoder Service')
 })
-
+const kafkaconfig =  new KafkaConfig()
+kafkaconfig.consume("transcoder",(value)=>{
+    console.log("got data from kafka : " , value)
+})
 app.listen(PORT, () => {
     console.log(`Server is listening at http://localhost:${PORT}`);
 })

@@ -1,7 +1,5 @@
 import AWS from 'aws-sdk';
 
-
-
 const uploadFileToS3 = async(req, res) => {
 
     console.log('Upload req received');
