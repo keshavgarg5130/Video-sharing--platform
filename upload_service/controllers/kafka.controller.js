@@ -1,14 +1,17 @@
 import KafkaConfig from "../kafka/kafka.js";
 
-const sendMessageToKafka = async (req, res) => {
+const sendMessageToKafka = async (title, url, res) => {
     console.log("got here in upload service...")
     try {
-        const message = req.body
+        const message = {
+            "title": title,
+            "url": url,
+        }
         console.log("body : ", message)
         const kafkaconfig = new KafkaConfig()
         const msgs = [
             {
-                key: "key1",
+                key: "video",
                 value: JSON.stringify(message)
             }
         ]

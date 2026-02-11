@@ -44,10 +44,11 @@ class KafkaConfig {
                                    }) =>{
                     const value = message.value.toString()
                     callback(value)
+                    console.log("connected value--------",value)
                 }
             })
         } catch (error) {
-            console.log(error)
+            console.log("error-----------",error)
         }
     }
 }
