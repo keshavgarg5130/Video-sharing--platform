@@ -127,6 +127,6 @@ git clone https://github.com/yourusername/video-platform
 
 Keshav Garg
 
-- GitHub: https://github.com/yourusername  
-- LinkedIn: https://linkedin.com/in/yourprofile  
-- X: https://x.com/yourhandle  
+- GitHub: https://github.com/keshavgarg5130 
+- LinkedIn: https://linkedin.com/in/keshav-garg-9607a1208  
+- X: https://x.com/@keshav5130
