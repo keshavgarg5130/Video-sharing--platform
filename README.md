@@ -118,7 +118,7 @@ Client → Upload Service → Kafka → Transcode Service → Kafka → Watch Se
 ## 🛠️ Setup
 
 ```bash
-git clone https://github.com/yourusername/video-platform
+git clone https://github.com/keshavgarg5130/Video-sharing--platform
 ```
 
 ---
